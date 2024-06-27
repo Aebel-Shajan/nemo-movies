@@ -10,3 +10,9 @@ Aim: Finish a project by collabing with others.
 
 ### Admin
 * [Mongodb movie db](https://cloud.mongodb.com/v2/667c24b0b9f9655f6fa0a5be#/clusters)
+
+
+## Credits
+Based of:
+* [Backend](https://github.com/fhsinchy/movieist)
+* [Frontend](https://github.com/GavinLonDigital/movie-gold-v1)
