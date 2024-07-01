@@ -1,4 +1,4 @@
-package com.nemo.movies;
+package com.nemo.movies.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,10 +17,15 @@ public class Review {
 
     @Id
     private ObjectId id;
-
     private String body;
+    private LocalDateTime created;
 
-//    LocalDateTime created;
-//
-//    LocalDateTime updated;
+    private LocalDateTime updated;
+
+    public Review(String body, LocalDateTime created, LocalDateTime updated) {
+        this.body = body;
+        this.created = created;
+        this.updated = updated;
+    }
+
 }
