@@ -2,20 +2,25 @@ package com.nemo.movies.services;
 
 import com.nemo.movies.models.Movie;
 import com.nemo.movies.repositories.MovieRepository;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MovieService {
 
-    @Autowired // tells framework to instantiate variable for us.
+    @Autowired
     private MovieRepository movieRepository;
 
     public List<Movie> allMovies() {
-//        System.out.println(movieRepository.findAll());
         return movieRepository.findAll();
+    }
+
+    public Optional<Movie> singleMovie(ObjectId id) {
+        return movieRepository.findById(id);
     }
 
 }
