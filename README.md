@@ -16,3 +16,7 @@ Aim: Finish a project by collabing with others.
 Based of:
 * [Backend](https://github.com/fhsinchy/movieist)
 * [Frontend](https://github.com/GavinLonDigital/movie-gold-v1)
+
+Contributers:
+* [Aebel](https://github.com/Aebel-Shajan)
+* [Yabbi](https://github.com/Y-Negash)
