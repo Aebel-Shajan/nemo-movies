@@ -6,19 +6,21 @@ function App() {
   
   const[movies, setMovies] = useState();
 
-  try {
+  const getMovies = async () => {
+ 
+  try { 
 
-    const getMovies = async () => {
-      const response = await api.get("/api/movies")
+      const response = await api.get("/movies")
+      console.log(response.data);
       setMovies(response.data);
     }
-    
-  } 
   catch (error) {
     console.log(error);
   }
-  
-
+}; 
+useEffect(() => {
+  getMovies();
+},[]);
   
   return (
     <div className="App">
