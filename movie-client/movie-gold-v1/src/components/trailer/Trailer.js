@@ -8,7 +8,7 @@ const Trailer = () => {
     let key = params.ytTrailerId;
 
     return (
-        <div id='react-player-container'>
+        <div className='react-player-container'>
             {
                 (key!=null) ? 
                 <ReactPlayer 
