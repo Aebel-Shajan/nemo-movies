@@ -1,40 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
 import Layout from './components/Layout';
 import {Routes, Route} from 'react-router-dom'
 import Home from './components/home/Home';
+import api from './api/axiosConfig';
+import { useState, useEffect } from 'react';
 
 function App() {
-  const movies = getPlaceholderMovies()
-
+  const[movies, setMovies] = useState([]);
+  
+  const getMovies = async () => {
+    try { 
+        const response = await api.get("/movies")
+        console.log(response.data);
+        setMovies(response.data);
+      }
+    catch (error) {
+      console.log(error);
+    }
+  }; 
+  
+  useEffect(() => {
+    getMovies();
+  },[]);
+  
   return (
     <div className="App">
-      
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<Home movies={movies}/>}></Route>
         </Route>
       </Routes>
-
     </div>
   );
 }
 
 export default App;
-
-function getPlaceholderMovies() {
-  return [
-    {
-      "title": "Avatar: The Way of Water",
-      "poster": "https://image.tmdb.org/t/p/w500/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
-    },
-    {
-      "title": "Roald Dahl's Matilda the Musical",
-      "poster": "https://image.tmdb.org/t/p/w500/ga8R3OiOMMgSvZ4cOj8x7prUNYZ.jpg"
-    },
-    {
-      "title": "Black Panther: Wakanda Forever",
-      "poster": "https://image.tmdb.org/t/p/w500/cryEN3sWlgB2wTzcUNVtDGI8bkM.jpg"
-    }
-  ]
-}
