@@ -35,3 +35,26 @@
     display: flex;
     align-items: center;
 }
+.movie-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+.play-button-icon-container {
+    padding: 0;
+    margin: 0;
+    width: 150px;
+}
+.play-button-icon {
+    padding: 0;
+    margin: 0;
+    color: gold;
+    font-size: 3rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.play-button-icon:hover {
+    font-size: 4rem;
+    color: white;
+}
