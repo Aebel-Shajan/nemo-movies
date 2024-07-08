@@ -3,7 +3,6 @@ import ReactPlayer from 'react-player';
 import './Trailer.css';
 
 const Trailer = () => {
-    
     let params = useParams();
     let key = params.ytTrailerId;
 
