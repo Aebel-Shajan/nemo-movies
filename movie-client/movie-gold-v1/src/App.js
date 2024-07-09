@@ -52,7 +52,9 @@ function App() {
               <Reviews 
                 getMovieData={getMovieData} 
                 reviews={reviews} 
-                setReviews={setReviews}/>
+                setReviews={setReviews}
+                movie={movie}
+              />
             }
           ></Route>
         </Route>
