@@ -11,3 +11,5 @@ const ReviewForm = () => {
         </Form>
     )
 }
+
+export default ReviewForm
