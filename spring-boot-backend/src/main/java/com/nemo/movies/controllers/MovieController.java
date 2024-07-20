@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +27,7 @@ public class MovieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id) {
+    public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String id) {
         return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(id), HttpStatus.OK);
     }
 }

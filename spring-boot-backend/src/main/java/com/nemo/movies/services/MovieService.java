@@ -2,7 +2,6 @@ package com.nemo.movies.services;
 
 import com.nemo.movies.models.Movie;
 import com.nemo.movies.repositories.MovieRepository;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,8 +18,8 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Optional<Movie> singleMovie(ObjectId id) {
-        return movieRepository.findById(id);
+    public Optional<Movie> singleMovie(String id) {
+        return movieRepository.findMovieByImdbId(id);
     }
 
 }
