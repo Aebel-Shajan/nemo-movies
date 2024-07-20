@@ -2,7 +2,6 @@ package com.nemo.movies.controllers;
 
 import com.nemo.movies.models.Movie;
 import com.nemo.movies.services.MovieService;
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
