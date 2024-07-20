@@ -20,7 +20,9 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
         e.preventDefault();
 
         const rev = revText.current;
-
+        if (!rev.value.trim()) {
+            return ;
+        }
         try{
             
             const response = await api.post("/reviews", {reviewBody:rev.value,imdbId:movieId});
