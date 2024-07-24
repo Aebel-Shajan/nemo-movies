@@ -6,6 +6,19 @@ import ReviewForm from '../reviewForm/ReviewForm';
 
 import React from 'react';
 
+/**
+ * @description This component renders a review page for each specific movie. Where the movie to be 
+ * reviewed is on the left and the text area to submit the review is on the right.
+ * 
+ * @param {function} getMovieData - prop for function that retrieves the data for the chosen movie 
+ * that the user wants to review.
+ * @param {object} movie - prop for the movie that the user wants to review.
+ * @param {Array<{body: string}>} reviews - prop for the array of review objects 
+ * with a body property that represents the review commment. 
+ * @param {function} setReviews - prop for function that sets the state of reviews.
+ * 
+ * @returns {JSX.Element} The rendered Reviews component.
+ */
 const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
 
     const revText = useRef();
