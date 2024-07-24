@@ -29,6 +29,14 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
         getMovieData(movieId);
     }, [])
 
+    /**
+     * @description This function makes a post request to the API when a new review has been submitted, adding it to the reviews array and updating the state. 
+     * If the user has only typed whitespace or has left the text area blank then nothing happens.
+     * 
+     * @param {Event} e - represents the form submission event.
+     * @returns {void}
+     */
+    
     const addReview = async (e) => {
         e.preventDefault();
 
