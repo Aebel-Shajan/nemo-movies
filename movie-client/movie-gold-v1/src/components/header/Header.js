@@ -7,7 +7,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 
 /**
- * @component
+ * @component 
  *
  *  @description This component renders the header which includes the navigation bar linking to other pages
  *such as the Watch List page.

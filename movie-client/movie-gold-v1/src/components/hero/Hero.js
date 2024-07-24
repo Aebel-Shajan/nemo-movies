@@ -7,10 +7,29 @@ import { faCirclePlay } from '@fortawesome/free-solid-svg-icons'
 import { Link, useNavigate } from "react-router-dom"
 import Button from 'react-bootstrap/Button'
 
+/**
+ * @component
+ * @description This component renders a carousel of all the movies with it's poster and title. 
+ * It also has buttons to watch the trailer or go to the movie's reviews page.
+ * 
+ * @param {Object[]} movies - An array of movies for the carousel.
+ * @param {string} movies[].title - title of movie.
+ * @param {string} movies[].poster - poster for movie.
+ * @param {string[]} movies[].backdrops - Array of URL for backdrop image of each movie.
+ * @param {string} movies[].trailerLink - link to trailer of movie.
+ * @param {string} movies[].imdbId - the imdbId of movie used to go to it's review page.
+ * 
+ * @returns {JSX.Element} The rendered Hero component.
+ */
 
 const Hero = ({movies}) => {
     const navigate = useNavigate();
 
+/**
+ * @function
+ * @param {string} movieId - the imdbId of the movie the user want to see the reviews of.
+ * @return {void} - doesn't return anything just navigates to correct reviews page.
+ */
     function review(movieId) {
         navigate(`/Reviews/${movieId}`)
     }
