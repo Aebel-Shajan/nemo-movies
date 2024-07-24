@@ -9,8 +9,9 @@ import { NavLink } from "react-router-dom";
 /**
  * @component 
  *
- *  @description This component renders the header which includes the navigation bar linking to other pages
+ * @description This component renders the header which includes the navigation bar linking to other pages
  *such as the Watch List page.
+ * @returns {JSX.Element} - The rendered Header component.
  */
 const Header = () => {
 
