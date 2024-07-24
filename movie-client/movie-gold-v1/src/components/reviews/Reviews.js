@@ -36,7 +36,8 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
      * 
      * @param {Event} e - represents the form submission event.
      * 
-     * @returns {void} doesn't return anything.
+     * @returns {Promise} A promise that is fulfilled and returns nothing once the post request and state update
+   * is complete.
      */
 
     const addReview = async (e) => {
