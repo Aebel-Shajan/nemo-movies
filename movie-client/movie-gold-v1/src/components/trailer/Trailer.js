@@ -6,7 +6,7 @@ import './Trailer.css';
  * @component
  * @description This component renders the trailer for a specific movie using the trailer Id taken from the
  * URL parameter.
- * @returns - The rendered trailer component with a trailer if Id is present.
+ * @returns {JSX.Element} - The rendered trailer component with a trailer if Id is present.
  */
 const Trailer = () => {
     let params = useParams();
