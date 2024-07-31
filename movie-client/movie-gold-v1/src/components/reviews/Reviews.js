@@ -6,6 +6,19 @@ import ReviewForm from '../reviewForm/ReviewForm';
 
 import React from 'react';
 
+/**
+ * @description This component renders a review page for each specific movie. Where the movie to be 
+ * reviewed is on the left and the text area to submit the review is on the right.
+ * 
+ * @param {function} getMovieData - prop for function that retrieves the data for the chosen movie 
+ * that the user wants to review.
+ * @param {object} movie - prop for the movie that the user wants to review.
+ * @param {Array<{body: string}>} reviews - prop for the array of review objects 
+ * with a body property that represents the review commment. 
+ * @param {function} setReviews - prop for function that sets the state of reviews.
+ * 
+ * @returns {JSX.Element} The rendered Reviews component.
+ */
 const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
 
     const revText = useRef();
@@ -15,6 +28,17 @@ const Reviews = ({getMovieData, movie, reviews, setReviews}) => {
     useEffect(()=> {
         getMovieData(movieId);
     }, [])
+
+    /**
+     * @function
+     * @description This function makes a post request to the API when a new review has been submitted, adding it to the reviews array and updating the state. 
+     * If the user has only typed whitespace or has left the text area blank then nothing happens.
+     * 
+     * @param {Event} e - represents the form submission event.
+     * 
+     * @returns {Promise} A promise that is fulfilled and returns nothing once the post request and state update
+   * is complete.
+     */
 
     const addReview = async (e) => {
         e.preventDefault();
